@@ -27,7 +27,8 @@ class Inscripcion {
 // Registrar
     bool Registrar(Candidato c);
 // Consultar
-
+// Mostrar todos los candidatos
+    void MostrarCandidatosInscritos(); 
 // Eliminar
 
 // Modificar

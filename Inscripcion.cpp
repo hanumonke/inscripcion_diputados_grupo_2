@@ -8,6 +8,11 @@
                 cout << "No pueden haber campos vacios" << endl; 
                 return false; 
             }
+
+        // revisar que el candidato no este inscrito
+
+
+        // revisar si hay espacio para un nuevo candidato
         if (listaCandidatos.Contar() >= 25) { 
             cout << "La lista de candidatos esta llena" << endl; 
             return false;
@@ -16,51 +21,12 @@
         // Revisar cantidad de partidos
         if (listaPartidos.Contar() >= 5) {
             cout << "Ya se inscribieron el numero maximo de partidos" << endl; 
-
             return false; 
         }
-        // si el partido existe tons revisamos cuantos candidatos tiene
-  
-        if (listaPartidos.Buscar(c.partido)) {
-            // contador de candidatos por partido
-            int candidatosPorPartido = 0; 
 
-            // iteraremos sobre la lista de candidatos
-            for (int i = 0; i < listaCandidatos.Contar(); i++) {
-                // colocamos la marca 
-                Candidato marca;
-                marca.nombre = "$$$"; 
-                marca.apellido = "$$$"; 
-                marca.partido = "$$$"; 
-                marca.status = "$$$"; 
-                marca.votos = -1; 
-                listaCandidatos.InsFinal(marca); 
-                
+        // revisar si el candidato pertenece a algun partido, de no pertenecer, agregar el nuevo partido
+        // revisar si el partido del candidato tiene espacio
 
-                // iteramos hasta encontrar la marca al principio
-                while (listaCandidatos.ObtInfo(listaCandidatos.ObtPrimero()).cedula != marca.cedula) 
-                {
-                    //extraemos el primer nodo para mirarlo
-                    nodo<Candidato>* current = listaCandidatos.ObtPrimero(); 
-                    Candidato currentInfo = listaCandidatos.ObtInfo(current);
-                    if (currentInfo.partido == c.partido) {
-                        candidatosPorPartido++; }
-                    listaCandidatos.InsFinal(currentInfo);
-                    listaCandidatos.EliComienzo(currentInfo);  
-                }
-
-                // eliminamos la marca
-                listaCandidatos.EliComienzo(marca); 
-
-                // verificamos el numero de candidatos por partido de c
-                if (candidatosPorPartido > 5) {
-                    cout << "Ya se ha alcanzado el maximo numero de candidatos para el partido " << c.partido << endl; 
-                    return false; 
-                }
-                }
-
-
-            }
 
         // finalmente, agregamos el candidato a la lista
         listaCandidatos.InsFinal(c); 
@@ -72,6 +38,28 @@
         
     
 // Consultar
+
+    void Inscripcion::MostrarCandidatosInscritos() {
+        Candidato marca;
+        marca.cedula = "$$$"; 
+        marca.nombre = "$$$"; 
+        marca.apellido = "$$$"; 
+        marca.partido = "$$$"; 
+        listaCandidatos.InsFinal(marca); 
+        Candidato actual = listaCandidatos.ObtInfo(listaCandidatos.ObtPrimero());
+
+        while (actual.cedula != marca.cedula) {
+            int counter = 1;
+            cout << "Candidato " << counter << endl; 
+            cout << "Cedula: " << actual.cedula;  
+            cout << "Nombre Completo: " << actual.nombre << " " << actual.apellido;  
+            cout << "Partido: " << actual.partido;
+            cout << "Status: " << actual.status; 
+
+            counter++; 
+        } 
+
+    }
 
 // Eliminar
 

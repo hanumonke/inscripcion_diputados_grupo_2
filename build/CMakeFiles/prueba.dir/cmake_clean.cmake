@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/prueba.dir/Inscripcion.cpp.o"
   "CMakeFiles/prueba.dir/Inscripcion.cpp.o.d"
-  "CMakeFiles/prueba.dir/Lista.cpp.o"
-  "CMakeFiles/prueba.dir/Lista.cpp.o.d"
   "CMakeFiles/prueba.dir/main.cpp.o"
   "CMakeFiles/prueba.dir/main.cpp.o.d"
   "prueba"

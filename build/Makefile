@@ -153,30 +153,6 @@ Inscripcion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prueba.dir/build.make CMakeFiles/prueba.dir/Inscripcion.cpp.s
 .PHONY : Inscripcion.cpp.s
 
-Lista.o: Lista.cpp.o
-.PHONY : Lista.o
-
-# target to build an object file
-Lista.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prueba.dir/build.make CMakeFiles/prueba.dir/Lista.cpp.o
-.PHONY : Lista.cpp.o
-
-Lista.i: Lista.cpp.i
-.PHONY : Lista.i
-
-# target to preprocess a source file
-Lista.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prueba.dir/build.make CMakeFiles/prueba.dir/Lista.cpp.i
-.PHONY : Lista.cpp.i
-
-Lista.s: Lista.cpp.s
-.PHONY : Lista.s
-
-# target to generate assembly for a file
-Lista.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prueba.dir/build.make CMakeFiles/prueba.dir/Lista.cpp.s
-.PHONY : Lista.cpp.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -213,9 +189,6 @@ help:
 	@echo "... Inscripcion.o"
 	@echo "... Inscripcion.i"
 	@echo "... Inscripcion.s"
-	@echo "... Lista.o"
-	@echo "... Lista.i"
-	@echo "... Lista.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

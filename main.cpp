@@ -1,5 +1,4 @@
 #include <iostream>
-#include "Lista.h"
 #include "Inscripcion.h"
 using namespace std;
 
@@ -7,9 +6,17 @@ int main()
 {
     Inscripcion i;
 
+
     cout << "Probando Inscribir un Candidato" << endl;
     cout << "Introduzca los datos del candidato" << endl;
+
+    // Menu
+    int inscribirUnCandidato = 1; 
+    
+    while (inscribirUnCandidato == 1) {
+
     Candidato nuevoCandidato;
+
     cin.ignore();
     cout << "Cedula: " << endl;
     getline(cin, nuevoCandidato.cedula);
@@ -33,9 +40,20 @@ int main()
     try
     {
         i.Registrar(nuevoCandidato);
+        // lc.InsFinal(nuevoCandidato); 
+        cout << "Candidato " << nuevoCandidato.cedula << " agregado correctamente";
     }
     catch (const std::exception &e)
     {
         std::cerr << e.what() << '\n';
     }
+
+
+    cout << "Deseas inscribir otro candidato? Si (1) No (0)";
+    cin >> inscribirUnCandidato; 
+    }
+
+
+    i.MostrarCandidatosInscritos(); 
+   
 }

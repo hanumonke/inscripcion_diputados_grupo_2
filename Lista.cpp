@@ -1,13 +1,13 @@
 
 #include "Lista.h"
 
-struct Candidato 
-{
-    string nombre, apellido, partido, cedula;
-    string status = "disponible";
-    int votos = 0;
+// struct Candidato 
+// {
+//     string nombre, apellido, partido, cedula;
+//     string status = "disponible";
+//     int votos = 0;
 
-};
+// };
 
 template <class Tipo>
 nodo<Tipo>* Lista<Tipo>::ObtPrimero(){
@@ -231,10 +231,12 @@ bool Lista<Tipo>::InsFinal(Tipo Valor) {
   else
       return false;    
 }
-bool operator==(const Candidato& lhs, const Candidato& rhs) {
-    // Compare the members of the Candidato class
-    return lhs.cedula == rhs.cedula && lhs.cedula == rhs.cedula;
-}
-template class Lista<string>;
-template class Lista<Candidato>; 
+// bool operator==(const Candidato& lhs, const Candidato& rhs) {
+//     // Compare the members of the Candidato class
+//     return lhs.cedula == rhs.cedula && lhs.cedula == rhs.cedula;
+// }
+// template class Lista<string>;
+// template class Lista<Candidato>; 
+
+
 

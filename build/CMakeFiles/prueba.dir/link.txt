@@ -1,1 +1,1 @@
-/usr/bin/g++ -g CMakeFiles/prueba.dir/main.cpp.o CMakeFiles/prueba.dir/Lista.cpp.o CMakeFiles/prueba.dir/Inscripcion.cpp.o -o prueba 
+/usr/bin/g++ -g CMakeFiles/prueba.dir/main.cpp.o CMakeFiles/prueba.dir/Inscripcion.cpp.o -o prueba 

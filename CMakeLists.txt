@@ -4,4 +4,4 @@ project(Lista)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(prueba main.cpp Lista.cpp Inscripcion.cpp)
+add_executable(prueba main.cpp Inscripcion.cpp)

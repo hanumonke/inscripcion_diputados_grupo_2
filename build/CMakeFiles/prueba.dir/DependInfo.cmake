@@ -9,7 +9,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/hanumonke/dev/prognonu/grupo_hanu/Inscripcion.cpp" "CMakeFiles/prueba.dir/Inscripcion.cpp.o" "gcc" "CMakeFiles/prueba.dir/Inscripcion.cpp.o.d"
-  "/home/hanumonke/dev/prognonu/grupo_hanu/Lista.cpp" "CMakeFiles/prueba.dir/Lista.cpp.o" "gcc" "CMakeFiles/prueba.dir/Lista.cpp.o.d"
   "/home/hanumonke/dev/prognonu/grupo_hanu/main.cpp" "CMakeFiles/prueba.dir/main.cpp.o" "gcc" "CMakeFiles/prueba.dir/main.cpp.o.d"
   )
 

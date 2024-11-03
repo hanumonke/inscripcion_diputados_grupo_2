@@ -2,22 +2,24 @@
 #include "Lista.h"
 using namespace std;
 
+    struct cedula {
+        char nacionalidad;
+        int numero;
+    };
 
 int main() {
-    Lista<int> listaPrueba; 
-    int primero, segundo;
-    cout << "Introduzca el primer numero"; 
-    cin >> primero;
-    cout << "Introduzca el segundo numero"; 
-    cin >> segundo;
 
-    listaPrueba.InsFinal(primero); 
-    listaPrueba.InsFinal(segundo); 
+    Lista<cedula> listaPrueba;
+    cedula cedula_hanu;
+    cedula_hanu.nacionalidad= 'V'; 
+    cedula_hanu.numero = 123456;
 
-    cout << listaPrueba.ObtInfo(listaPrueba.ObtPrimero()); 
+    listaPrueba.InsFinal(cedula_hanu);
 
-    listaPrueba.EliComienzo(primero); 
+    cout << listaPrueba.ObtInfo(listaPrueba.ObtPrimero()).nacionalidad << endl;
 
-    cout << listaPrueba.ObtInfo(listaPrueba.ObtPrimero());
+    
+ 
+
 
 }

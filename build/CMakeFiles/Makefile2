@@ -81,12 +81,12 @@ clean: CMakeFiles/prueba.dir/clean
 CMakeFiles/prueba.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prueba.dir/build.make CMakeFiles/prueba.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prueba.dir/build.make CMakeFiles/prueba.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hanumonke/dev/prognonu/grupo_hanu/build/CMakeFiles --progress-num=1,2,3,4 "Built target prueba"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hanumonke/dev/prognonu/grupo_hanu/build/CMakeFiles --progress-num=1,2,3 "Built target prueba"
 .PHONY : CMakeFiles/prueba.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/prueba.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hanumonke/dev/prognonu/grupo_hanu/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hanumonke/dev/prognonu/grupo_hanu/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/prueba.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hanumonke/dev/prognonu/grupo_hanu/build/CMakeFiles 0
 .PHONY : CMakeFiles/prueba.dir/rule

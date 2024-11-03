@@ -6,11 +6,6 @@
 },
 {
   "directory": "/home/hanumonke/dev/prognonu/grupo_hanu/build",
-  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/prueba.dir/Lista.cpp.o -c /home/hanumonke/dev/prognonu/grupo_hanu/Lista.cpp",
-  "file": "/home/hanumonke/dev/prognonu/grupo_hanu/Lista.cpp"
-},
-{
-  "directory": "/home/hanumonke/dev/prognonu/grupo_hanu/build",
   "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/prueba.dir/Inscripcion.cpp.o -c /home/hanumonke/dev/prognonu/grupo_hanu/Inscripcion.cpp",
   "file": "/home/hanumonke/dev/prognonu/grupo_hanu/Inscripcion.cpp"
 }

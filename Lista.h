@@ -2,6 +2,7 @@
 #define Lista_H
 #include <iostream>
 #include <string>
+
 using namespace std;
 template <class Tipo>
 class Lista;
@@ -48,5 +49,5 @@ public:
          // EliminarMarca
 };
 
-
+#include "Lista.cpp"
 #endif
