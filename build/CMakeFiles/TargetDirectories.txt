@@ -1,0 +1,3 @@
+/home/hanumonke/dev/prognonu/grupo_hanu/build/CMakeFiles/prueba.dir
+/home/hanumonke/dev/prognonu/grupo_hanu/build/CMakeFiles/edit_cache.dir
+/home/hanumonke/dev/prognonu/grupo_hanu/build/CMakeFiles/rebuild_cache.dir
