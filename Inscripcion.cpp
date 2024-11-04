@@ -24,19 +24,48 @@
             return false; 
         }
 
-        // revisar si el candidato pertenece a algun partido, de no pertenecer, agregar el nuevo partido
-        // revisar si el partido del candidato tiene espacio
+        // // revisar si el candidato pertenece a algun partido, de no pertenecer, agregar el nuevo partido
+        // if (listaPartidos.Buscar(c.partido)) {
+        //     cout << "El partido ya existe!" << endl; 
+        // // revisar si el partido del candidato tiene espacio
+        // int contadorPartido = 0;
+        // // crear marca 
+        // Candidato marca; 
+        // marca.cedula = "$$$"; 
+        // listaCandidatos.InsFinal(marca);
+
+        // while (listaCandidatos.ObtInfo(listaCandidatos.ObtPrimero()).cedula != marca.cedula) {
+        //     Candidato actual = listaCandidatos.ObtInfo(listaCandidatos.ObtPrimero());
+            
+        //     if (actual.partido == c.partido) {
+        //         contadorPartido++;
+        //     }
+
+        //     listaCandidatos.InsFinal(actual);
+        //     listaCandidatos.AsigPrimero(listaCandidatos.ObtProx(listaCandidatos.ObtPrimero()));
+             
+        // } 
+
+        // Candidato primero = listaCandidatos.ObtInfo(listaCandidatos.ObtPrimero()); 
+        // if (primero.cedula == marca.cedula) {
+        //     listaCandidatos.EliComienzo(marca); 
+        //     cout << "eliminada la marca!" << endl; 
+        // }
+
+        // cout << "el partido " << c.partido << " tiene " << contadorPartido << " candidatos" << endl; 
+
+        // }
 
 
         // finalmente, agregamos el candidato a la lista
-        listaCandidatos.InsFinal(c); 
+        listaCandidatos.InsFinal(c);
 
-        cout << "Candidato " << c.cedula << " " << c.nombre << " del partido " << c.partido << " agregado correctamente." << endl; 
+
 
         return true; 
         }
         
-    
+ 
 // Consultar
 
     void Inscripcion::MostrarCandidatosInscritos() {
@@ -63,6 +92,11 @@
             cout << endl;
             counter++; 
         } 
+        Candidato primero = listaCandidatos.ObtInfo(listaCandidatos.ObtPrimero()); 
+        if (primero.cedula == marca.cedula) {
+            listaCandidatos.EliComienzo(marca); 
+            cout << "eliminada la marca!" << endl; 
+        }
 
     }
 
