@@ -58,7 +58,6 @@
             cout << " Status: " << actual.status << endl;
 
             listaCandidatos.InsFinal(actual);
-
             listaCandidatos.AsigPrimero(listaCandidatos.ObtProx(listaCandidatos.ObtPrimero()));
             
             cout << endl;
