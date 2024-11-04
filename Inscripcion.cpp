@@ -95,9 +95,44 @@
         Candidato primero = listaCandidatos.ObtInfo(listaCandidatos.ObtPrimero()); 
         if (primero.cedula == marca.cedula) {
             listaCandidatos.EliComienzo(marca); 
-            cout << "eliminada la marca!" << endl; 
+            // cout << "eliminada la marca!" << endl; 
         }
 
+    };
+
+    Candidato Inscripcion::BuscarCandidato(string ced) {
+        if (listaCandidatos.Vacia()) cout << "Lista vacia" << endl;
+        Candidato encontrado; 
+        // crear marca 
+        Candidato marca; 
+        marca.cedula = "$$$"; 
+        listaCandidatos.InsFinal(marca);
+
+        while (listaCandidatos.ObtInfo(listaCandidatos.ObtPrimero()).cedula != marca.cedula) {
+            Candidato actual = listaCandidatos.ObtInfo(listaCandidatos.ObtPrimero());
+            
+            if (actual.cedula == ced) {
+                encontrado = actual; 
+            }
+
+            listaCandidatos.InsFinal(actual);
+            listaCandidatos.AsigPrimero(listaCandidatos.ObtProx(listaCandidatos.ObtPrimero()));
+            
+            
+        } 
+
+        Candidato primero = listaCandidatos.ObtInfo(listaCandidatos.ObtPrimero()); 
+        if (primero.cedula == marca.cedula) {
+            listaCandidatos.EliComienzo(marca); 
+            // cout << "eliminada la marca!" << endl; 
+        }
+
+        if (encontrado.nombre.empty()) {
+            cout << "Candidato no encontrado" << endl;
+            return Candidato(); 
+        } 
+
+        return encontrado; 
     }
 
 
