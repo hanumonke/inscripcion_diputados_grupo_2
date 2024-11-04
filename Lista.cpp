@@ -208,7 +208,7 @@ bool Lista<Tipo>::InsFinal(Tipo Valor) {
     if (!Llena()) {
         nuevo = new nodo<Tipo>;
         if (nuevo == nullptr) {
-            // Manejar error de asignación de memoria
+            // Manejar error de asignaciï¿½n de memoria
             return false;
         }
         nuevo->info = Valor;
@@ -217,7 +217,7 @@ bool Lista<Tipo>::InsFinal(Tipo Valor) {
         if (Vacia()) {
             Primero = nuevo;
             Final = Primero;
-            return true; // Retorno temprano para simplificar la lógica
+            return true; // Retorno temprano para simplificar la lï¿½gica
         }
 
         Final->prox = nuevo;
@@ -234,5 +234,47 @@ template <class Tipo>
 nodo<Tipo>* Lista<Tipo>::ObtFinal() {
   return Final; 
 }
+
+// METODOS PARA LAS COLAS
+
+template <class Tipo>
+bool Lista<Tipo>::InsertarNodoCola(Tipo Valor) {
+	Apuntador nuevo;
+
+	// verificar si la lista no estaa llena
+	if (!Llena()) {
+
+		// crear un nodo
+		nuevo = new nodo<Tipo>;
+		nuevo->info = Valor;
+		nuevo->prox = NULL;
+		if (Final == NULL) {
+			Primero = nuevo;
+		} else {
+			Final->prox = nuevo;
+		}
+		Final = nuevo;
+		return true;
+	} else {
+		return false;
+	}
+};
+
+template <class Tipo>
+bool Lista<Tipo>::RemoverNodoCola(Tipo &Valor) {
+	Apuntador viejo;
+	// verificar si la lista no estaa vacia
+	if (!Vacia()) {
+		viejo = Primero;
+		Valor = viejo->info;
+		Primero = viejo->prox;
+		if (Primero == NULL)
+			Final = NULL;
+		delete viejo;
+		return true;
+	} else {
+		return false;
+	}
+};
 
 

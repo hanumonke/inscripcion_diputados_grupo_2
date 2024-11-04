@@ -32,6 +32,7 @@ class Inscripcion {
 // Buscar un candidato por cedula
     Candidato BuscarCandidato(string cedula); 
 // Eliminar
+    void EliminarCandidato(string cedula);
 
 // Modificar
 
