@@ -2,7 +2,8 @@
 #include "Inscripcion.h"
 using namespace std;
 
-int main() {
+int main()
+{
     Inscripcion i;
     int opcionInicial = 0;
 
@@ -12,18 +13,23 @@ int main() {
     cout << "Elige una opcion: ";
     cin >> opcionInicial;
 
-    if (opcionInicial == 1) {
+    if (opcionInicial == 1)
+    {
         int opcion;
-        do {
+        do
+        {
             cout << "\n--- Menu de gestion de candidatos ---" << endl;
             cout << "1. Registrar candidato" << endl;
             cout << "2. Mostrar candidatos" << endl;
-            cout << "3. Salir" << endl;
-            cout << "Elige una opción: ";
+            cout << "3. Buscar Candidato" << endl;
+            cout << "4. Salir" << endl;
+            cout << "Elige una opciï¿½n: ";
             cin >> opcion;
 
-            switch (opcion) {
-            case 1: {
+            switch (opcion)
+            {
+            case 1:
+            {
                 Candidato nuevoCandidato;
 
                 cin.ignore(); // Para limpiar el buffer de entrada
@@ -41,14 +47,16 @@ int main() {
                 getline(cin, nuevoCandidato.partido);
 
                 // Suponiendo que el status se autoasigna
-                cout << "Status (Se autogenerará): ";
+                cout << "Status (Se autogenerarï¿½): ";
                 getline(cin, nuevoCandidato.status);
 
-                try {
+                try
+                {
                     i.Registrar(nuevoCandidato);
                     cout << "Candidato " << nuevoCandidato.cedula << " agregado correctamente" << endl;
                 }
-                catch (const std::exception& e) {
+                catch (const std::exception &e)
+                {
                     cerr << "Error: " << e.what() << endl;
                 }
                 break;
@@ -56,23 +64,45 @@ int main() {
             case 2:
                 i.MostrarCandidatosInscritos();
                 break;
-            case 3:
+
+            case 3: {
+                string cedulaCandidato;
+                cout << "Ingrese la cedula del candidato" << endl;
+                cin.ignore(); 
+                getline(cin, cedulaCandidato);
+
+                Candidato candi = i.BuscarCandidato(cedulaCandidato);
+                if (!candi.nombre.empty())
+                {
+                    cout << "Candidato encontrado: " << endl;
+                    cout << " Cedula: " << candi.cedula;
+                    cout << " Nombre Completo: " << candi.nombre << " " << candi.apellido;
+                    cout << " Partido: " << candi.partido;
+                    cout << " Status: " << candi.status << endl;
+                }
+                break;
+
+            }
+            case 4:
                 cout << "Saliendo del sistema de gestion de candidatos." << endl;
                 break;
             default:
                 cout << "Opcion no valida. Intenta de nuevo." << endl;
             }
 
-            if (opcion != 3) {
-                cout << "¿Deseas realizar otra accion? Si (1) No (0): ";
+            if (opcion != 4)
+            {
+                cout << "ï¿½Deseas realizar otra accion? Si (1) No (0): ";
                 cin >> opcion;
-                if (opcion == 0) {
-                    opcion = 3; // Para salir del bucle
+                if (opcion == 0)
+                {
+                    opcion = 4; // Para salir del bucle
                 }
             }
-        } while (opcion != 3);
+        } while (opcion != 4);
     }
-    else {
+    else
+    {
         cout << "Saliendo del programa." << endl;
     }
 
