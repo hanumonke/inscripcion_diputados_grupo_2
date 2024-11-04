@@ -41,6 +41,7 @@ public:
          nodo<Tipo>*Buscar(Tipo Valor);
          void pasarListaAux(Lista<Tipo> &listaFuente, Lista<Tipo> &listaDestino);
          bool InsFinal(Tipo Valor); 
+         nodo<Tipo>* ObtFinal();
 
          
          // Metodos para cola

@@ -182,7 +182,8 @@ CMakeFiles/prueba.dir/Inscripcion.cpp.o: /home/hanumonke/dev/prognonu/grupo_hanu
   /usr/include/c++/12/bits/ostream.tcc \
   /usr/include/c++/12/istream \
   /usr/include/c++/12/bits/istream.tcc \
-  /home/hanumonke/dev/prognonu/grupo_hanu/Lista.h
+  /home/hanumonke/dev/prognonu/grupo_hanu/Lista.h \
+  /home/hanumonke/dev/prognonu/grupo_hanu/Lista.cpp
 
 CMakeFiles/prueba.dir/main.cpp.o: /home/hanumonke/dev/prognonu/grupo_hanu/main.cpp \
   /usr/include/stdc-predef.h \

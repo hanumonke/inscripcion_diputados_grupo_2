@@ -4,7 +4,7 @@
 // Registrar
  bool Inscripcion::Registrar(Candidato c) {
         // validaciones
-        if (c.nombre == "" && c.apellido == "" && c.cedula != "" && c.partido != "" ){
+        if (c.nombre.empty() && c.apellido.empty() && c.cedula.empty() && c.partido.empty()){
                 cout << "No pueden haber campos vacios" << endl; 
                 return false; 
             }
@@ -40,22 +40,28 @@
 // Consultar
 
     void Inscripcion::MostrarCandidatosInscritos() {
-        Candidato marca;
+        int counter = 1;
+
+        if (listaCandidatos.Vacia()) cout << "Lista vacia" << endl;
+
+        // crear marca 
+        Candidato marca; 
         marca.cedula = "$$$"; 
-        marca.nombre = "$$$"; 
-        marca.apellido = "$$$"; 
-        marca.partido = "$$$"; 
-        listaCandidatos.InsFinal(marca); 
-        Candidato actual = listaCandidatos.ObtInfo(listaCandidatos.ObtPrimero());
+        listaCandidatos.InsFinal(marca);
 
-        while (actual.cedula != marca.cedula) {
-            int counter = 1;
+        while (listaCandidatos.ObtInfo(listaCandidatos.ObtPrimero()).cedula != marca.cedula) {
+            Candidato actual = listaCandidatos.ObtInfo(listaCandidatos.ObtPrimero());
             cout << "Candidato " << counter << endl; 
-            cout << "Cedula: " << actual.cedula;  
-            cout << "Nombre Completo: " << actual.nombre << " " << actual.apellido;  
-            cout << "Partido: " << actual.partido;
-            cout << "Status: " << actual.status; 
+            cout << " Cedula: " << actual.cedula;  
+            cout << " Nombre Completo: " << actual.nombre << " " << actual.apellido;  
+            cout << " Partido: " << actual.partido;
+            cout << " Status: " << actual.status << endl;
 
+            listaCandidatos.InsFinal(actual);
+
+            listaCandidatos.AsigPrimero(listaCandidatos.ObtProx(listaCandidatos.ObtPrimero()));
+            
+            cout << endl;
             counter++; 
         } 
 

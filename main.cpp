@@ -41,7 +41,7 @@ int main()
     {
         i.Registrar(nuevoCandidato);
         // lc.InsFinal(nuevoCandidato); 
-        cout << "Candidato " << nuevoCandidato.cedula << " agregado correctamente";
+        cout << "Candidato " << nuevoCandidato.cedula << " agregado correctamente" << endl;
     }
     catch (const std::exception &e)
     {
@@ -55,5 +55,6 @@ int main()
 
 
     i.MostrarCandidatosInscritos(); 
+    i.MostrarCandidatosInscritos();
    
 }
