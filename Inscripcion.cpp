@@ -139,6 +139,35 @@
 
 // Eliminar
 
+void Inscripcion::EliminarCandidato(string cedCandidato) {
+
+        Candidato marca;
+        marca.cedula = "$$$";
+
+        if (!listaCandidatos.Llena() && !listaCandidatos.Vacia()) {
+            bool encontrado = false;
+            Candidato candAux;
+
+            listaCandidatos.InsertarNodoCola(marca);
+
+            while (true){
+
+                listaCandidatos.RemoverNodoCola(candAux);
+
+                if (candAux.cedula == marca.cedula) { break; }
+
+                if (candAux.cedula == cedCandidato) {
+
+                    encontrado = true;
+                    std::cout << "\n\nCandidato eliminado\n\n";
+                    // Pendiente Actualizar el contador de candidatos por partido
+
+                } else { listaCandidatos.InsertarNodoCola(candAux); }
+            }
+            if (!encontrado) { std::cout << "Candidato no encontrado." << std::endl; }
+        }
+    }
+
 // Modificar
 
 // Reportes

@@ -1,0 +1,12 @@
+# ninja log v6
+5	524	7524284889005650	CMakeFiles/prueba.dir/main.cpp.obj	dbe5104625012d5
+11	550	7524284889077049	CMakeFiles/prueba.dir/Inscripcion.cpp.obj	2cf70ffa3ed40b9a
+550	679	7524284894461043	prueba.exe	c5202eef52f61067
+15	683	7524303251038258	CMakeFiles/prueba.dir/main.cpp.obj	dbe5104625012d5
+27	700	7524303251154897	CMakeFiles/prueba.dir/Inscripcion.cpp.obj	2cf70ffa3ed40b9a
+700	854	7524303257889584	prueba.exe	c5202eef52f61067
+10	481	7524303438147633	CMakeFiles/prueba.dir/main.cpp.obj	dbe5104625012d5
+482	614	7524303442863547	prueba.exe	c5202eef52f61067
+14	619	7524305076074902	CMakeFiles/prueba.dir/main.cpp.obj	dbe5104625012d5
+24	662	7524305076165752	CMakeFiles/prueba.dir/Inscripcion.cpp.obj	2cf70ffa3ed40b9a
+662	807	7524305082552391	prueba.exe	c5202eef52f61067

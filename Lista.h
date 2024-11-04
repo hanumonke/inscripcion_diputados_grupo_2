@@ -45,6 +45,8 @@ public:
 
          
          // Metodos para cola
+        bool InsertarNodoCola(Tipo Valor);
+        bool RemoverNodoCola(Tipo &Valor);
          // insFinal
          // CrearMarca
          // EliminarMarca

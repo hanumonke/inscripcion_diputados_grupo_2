@@ -22,7 +22,8 @@ int main()
             cout << "1. Registrar candidato" << endl;
             cout << "2. Mostrar candidatos" << endl;
             cout << "3. Buscar Candidato" << endl;
-            cout << "4. Salir" << endl;
+            cout << "4. Eliminar Candidato" << endl;
+            cout << "5. Salir" << endl;
             cout << "Elige una opci�n: ";
             cin >> opcion;
 
@@ -83,23 +84,34 @@ int main()
                 break;
 
             }
-            case 4:
+            case 4: {
+            string cedulaCandidato;
+            cout << "Ingrese la cedula del candidato" << endl;
+            cin.ignore();
+            getline(cin, cedulaCandidato);
+
+            i.EliminarCandidato(cedulaCandidato);
+
+            break;
+
+            }
+            case 5:
                 cout << "Saliendo del sistema de gestion de candidatos." << endl;
                 break;
             default:
                 cout << "Opcion no valida. Intenta de nuevo." << endl;
             }
 
-            if (opcion != 4)
+            if (opcion != 5)
             {
                 cout << "�Deseas realizar otra accion? Si (1) No (0): ";
                 cin >> opcion;
                 if (opcion == 0)
                 {
-                    opcion = 4; // Para salir del bucle
+                    opcion = 5; // Para salir del bucle
                 }
             }
-        } while (opcion != 4);
+        } while (opcion != 5);
     }
     else
     {
